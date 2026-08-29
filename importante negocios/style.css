@@ -1,0 +1,337 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f3f4;
+overflow-x:hidden;
+}
+
+/* DIAPOSITIVAS */
+
+.slide{
+display:none;
+min-height:100vh;
+position:relative;
+}
+
+.slide.activa{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* LOGO FONDO */
+
+.logo-fondo{
+position:absolute;
+width:900px;
+height:900px;
+background:url("logo.png") center center no-repeat;
+background-size:contain;
+opacity:.18;
+z-index:0;
+}
+
+/* INICIO */
+
+.contenido-inicio{
+position:relative;
+z-index:2;
+text-align:center;
+max-width:1000px;
+padding:40px;
+}
+
+.contenido-inicio h1{
+font-family:'Great Vibes',cursive;
+font-size:110px;
+color:#d9629a;
+margin-bottom:10px;
+}
+
+.contenido-inicio h2{
+font-size:34px;
+color:#c45d93;
+margin-bottom:25px;
+}
+
+.contenido-inicio p{
+font-size:22px;
+color:#555;
+margin-bottom:35px;
+}
+
+/* BOTONES */
+
+.inicio-botones{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.inicio-botones button,
+.botones button,
+.card button{
+background:#d9629a;
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+.inicio-botones button:hover,
+.botones button:hover,
+.card button:hover{
+transform:translateY(-2px);
+}
+
+/* FOOTER NEGRO */
+
+.footer-negro{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+background:#111;
+padding:25px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:3px solid #d9629a;
+}
+
+/* REDES */
+
+.footer-izquierda{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.footer-izquierda a{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+color:white;
+font-size:20px;
+font-weight:600;
+transition:.3s;
+}
+
+.footer-izquierda a:hover{
+color:#d9629a;
+}
+
+.footer-izquierda img{
+width:50px;
+height:50px;
+object-fit:contain;
+transition:.3s;
+}
+
+.footer-izquierda a:hover img{
+transform:scale(1.1);
+}
+
+/* CENTRO FOOTER */
+
+.footer-centro{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+}
+
+.footer-centro h3{
+font-size:34px;
+color:#d9629a;
+margin-bottom:5px;
+}
+
+.footer-centro p{
+font-size:15px;
+color:#ddd;
+}
+
+/* TARJETAS */
+
+.card{
+background:white;
+width:90%;
+max-width:700px;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h2{
+text-align:center;
+margin-bottom:25px;
+color:#d9629a;
+}
+
+/* INPUTS */
+
+input{
+width:100%;
+padding:15px;
+border:2px solid #ddd;
+border-radius:10px;
+margin-bottom:15px;
+font-size:16px;
+}
+
+input:focus{
+outline:none;
+border-color:#d9629a;
+}
+
+.errorInput{
+border:2px solid red !important;
+}
+
+.error{
+color:red;
+font-size:14px;
+margin-bottom:15px;
+}
+
+/* BOTONES ATRÁS Y CONTINUAR */
+
+.botones{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+/* SERVICIOS */
+
+.servicio{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+border:1px solid #eee;
+border-radius:10px;
+margin-bottom:12px;
+}
+
+.servicio strong{
+color:#d9629a;
+}
+
+/* HORARIOS */
+
+#horarios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:10px;
+margin-top:20px;
+}
+
+.hora{
+background:#e8f8ee;
+border:2px solid #98d6aa;
+padding:12px;
+text-align:center;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.hora:hover{
+background:#d9f1e1;
+}
+
+.hora.seleccionada{
+background:#d9629a;
+color:white;
+border-color:#d9629a;
+}
+
+.hora.ocupada{
+background:#ffd6d6;
+border:2px solid red;
+color:#900;
+cursor:not-allowed;
+}
+
+/* RESUMEN */
+
+#resumen{
+line-height:2;
+font-size:18px;
+}
+
+/* RESERVAS */
+
+#listaReservas{
+margin-top:15px;
+}
+
+.reserva{
+background:#fff3f8;
+padding:15px;
+border-left:5px solid #d9629a;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.cancelar{
+background:#e74c3c !important;
+margin-top:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.logo-fondo{
+width:350px;
+height:350px;
+}
+
+.contenido-inicio h1{
+font-size:60px;
+}
+
+.contenido-inicio h2{
+font-size:24px;
+}
+
+.contenido-inicio p{
+font-size:18px;
+}
+
+.footer-negro{
+flex-direction:column;
+gap:20px;
+padding:20px;
+}
+
+.footer-centro{
+position:static;
+transform:none;
+}
+
+.card{
+padding:25px;
+}
+
+.servicio{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
